@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Success</title>
+</head>
+<body>
+<h1 align="center">{{ filename }}</h1>
+    <div align="center">
+        <table>
+            <h1>
+                {% for table in tables %}
+                <h2>
+                    {{titles[loop.index]}}
+                </h2>
+                {{ table|safe }}
+                {% endfor %}
+            </h1>
+        </table>
+    </div>
+</body>
+</html>

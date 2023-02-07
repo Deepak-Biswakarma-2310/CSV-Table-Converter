@@ -1,0 +1,19 @@
+{% block head %}
+
+<title>File Uploader</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content" align="center">
+    <h1 style="text-align: center">File Uploader</h1>
+
+    <div class="form" align="center">
+        <form action = "/show" method = "POST"
+                enctype = "multipart/form-data">
+            <input type="file" name="file"/>
+            <input type="submit" name="Upload"/>
+        </form>
+    </div>
+</div>
+{% endblock %}
